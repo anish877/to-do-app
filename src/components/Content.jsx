@@ -19,7 +19,7 @@ const Content = () => {
     return savedTasks ? JSON.parse(savedTasks) : [
       { 
         id: 1, 
-        text: "Buy Groceries", 
+        text: "", 
         completed: false, 
         priority: "medium", 
         isStarred: false, 
@@ -341,19 +341,25 @@ const Content = () => {
       </div>
 
       {/* Main Grid Layout */}
-      <div className={`grid grid-cols-1 lg:grid-cols-12 lg:mt-16 ${selectedTask?"gap-.5":"gap-8"} lg:pl-16 lg:-translate-y-10`}>
+      <div className={`grid grid-cols-1 lg:grid-cols-12 lg:mt-16 ${selectedTask?"gap-.5":"gap-7"} lg:pl-16 lg:-translate-y-10`}>
         {/* Left Sidebar */}
         <div className={`lg:col-span-3 ${isMobileMenuOpen ? 'block' : 'hidden lg:block'} bg-[#EFF6EF] p-4 lg:px-7 translate-y-16`}>
           <div className="flex flex-col gap-6 -translate-y-24">
             {/* Profile Section */}
             <div className="flex flex-col items-center justify-center gap-3 py-6">
-              <div className="rounded-full bg-green-300 h-10 w-10 p-16"></div>
+            <div className="relative w-[118px] h-[118px] overflow-hidden rounded-full">
+                <img 
+                    src="https://s3-alpha-sig.figma.com/img/333c/2d05/a5f50ecf137e000854b1631514ec0670?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UI98xJz9KlKtBp63kzXrnd1bcYVR7W3jjoFNxYCAmo~bN1HOiSZiaBT~0vlO3BcH4Tum0k8XatjemnKd-nZ-A2pLSV-D~z8XdKJev6LwLWE51pr53Dfu2~ELCxkBDkqDBkvirqOK7hdKmZ6X67uPo83kcY86SpqHc4Tux9tcyrKGlVjJ8LibsnlfKlltEYE90SXA2LWTiIahuwfnl7vz0nVAe0g7JBPgKoXZHqQOmi~59QARMhJcCWKBCHfTaNO5oW-qNZneFC-DU7Q-RyZ--1gAvTbdmBIAbR1np68xhydNgXNv-JyaghB-IYRy0iNX3QoohS4W1CIX-jwsEkBPAA__"
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                />
+            </div>
               <p className="flex">Hey, ABCD</p>
             </div>
 
             {/* Navigation Menu */}
-            <div className="bg-white flex flex-col justify-start gap-5 p-10 pt-7 pb-7 px-20">
-              <p className="flex gap-5 -translate-x-16 items-center tracking-wider">
+            <div className="bg-white flex flex-col justify-start gap-5 p-10 pt-7 pb-7 px-20 pr-0 w-full rounded-sm">
+              <p className="flex gap-5 -translate-x-16 items-center tracking-wider rounded-md w-full">
                 <NotebookText size={25} />All Tasks
               </p>
               <p className="flex gap-5 -translate-x-16 items-center tracking-wider">
@@ -371,7 +377,7 @@ const Content = () => {
             </div>
 
             {/* Add List Button */}
-            <div className="mt-2">
+            <div className="mt-2 rounded-sm">
               <div className="flex gap-3 bg-white py-7 px-5 items-center">
                 <Plus size={35} />
                 <p>Add List</p>
@@ -379,7 +385,7 @@ const Content = () => {
             </div>
 
             {/* Task Statistics with Donut Chart */}
-            <div className="bg-white p-5 px-0 mt-2">
+            <div className="bg-white p-5 px-0 mt-2 rounded-sm">
               <div className="flex gap-1 justify-between pb-7 mb-4 border-b border-gray-200 items-center px-5">
                 <p>Task Overview</p>
                 <Info size={17}/>
@@ -402,12 +408,12 @@ const Content = () => {
                 </PieChart>
                 <div className="flex gap-4 mt-8">
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-[#357937] rounded-full"></div>
-                    <span className="text-sm">Completed</span>
+                    <div className="w-2 h-2 bg-[#357937] rounded-full"></div>
+                    <span className="text-xs">Completed</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-[#CEE0CF] rounded-full"></div>
-                    <span className="text-sm">Pending</span>
+                    <div className="w-2 h-2 bg-[#CEE0CF] rounded-full"></div>
+                    <span className="text-xs">Pending</span>
                   </div>
                 </div>
               </div>
