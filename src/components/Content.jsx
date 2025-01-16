@@ -157,7 +157,7 @@ const Content = () => {
     };
 
     return (
-      <div className="bg-[#EFF6EF] w-full h-full p-6 border-[#D9DFDA] lg:block">
+      <div className="bg-[#EFF6EF] w-full h-full p-6 pt-0 border-[#D9DFDA] lg:block">
         <div className='flex flex-col justify-between h-full'>
           <div className='flex flex-col gap-5 p-5'>
             <div className='border-t border-b border-[#D9DFDA] py-8 flex gap-5 font-semilight tracking-wide items-center'>
@@ -343,7 +343,7 @@ const Content = () => {
       {/* Main Grid Layout */}
       <div className={`grid grid-cols-1 lg:grid-cols-12 lg:mt-16 ${selectedTask?"gap-.5":"gap-7"} lg:pl-16 lg:-translate-y-10`}>
         {/* Left Sidebar */}
-        <div className={`lg:col-span-3 ${isMobileMenuOpen ? 'block' : 'hidden lg:block'} bg-[#EFF6EF] p-4 lg:px-7 translate-y-16`}>
+        <div className={`lg:col-span-3 ${isMobileMenuOpen ? 'block' : 'hidden lg:block'} bg-[#EFF6EF] p-4 lg:px-7 mt-16`}>
           <div className="flex flex-col gap-6 -translate-y-24">
             {/* Profile Section */}
             <div className="flex flex-col items-center justify-center gap-3 py-6">
@@ -573,7 +573,7 @@ const Content = () => {
 
         {/* Right Sidebar - Task Details */}
         {selectedTask && (
-          <div className="lg:col-span-3 lg:-translate-y-6 fixed inset-0 lg:relative lg:inset-auto bg-white lg:bg-transparent z-50">
+          <div className="lg:col-span-3 lg:translate-y-3 fixed inset-0 lg:relative lg:inset-auto bg-white lg:bg-transparent z-50">
             <TaskDetailsSidebar
               task={selectedTask}
               onClose={() => setSelectedTask(null)}
