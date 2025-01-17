@@ -58,14 +58,12 @@ Welcome to **DoIt**, a feature-rich task management application built with React
 
 4. Open your browser and navigate to `http://localhost:3000`.
 
-## Screenshots
-<img width="1512" alt="Screenshot 2025-01-16 at 5 44 31 PM" src="https://github.com/user-attachments/assets/8fe4467b-4789-4bbf-88c5-691833c7cfe9" />
+<img width="747" alt="Screenshot 2025-01-17 at 9 13 22 AM" src="https://github.com/user-attachments/assets/f617a025-ba81-4811-8635-2bbda5410ba0" />
 
-### Task Management
-<img width="1512" alt="Screenshot 2025-01-16 at 5 44 04 PM" src="https://github.com/user-attachments/assets/7d6a9aa6-e7cf-4322-846d-91b1b9db4c8a" />
+<img width="970" alt="Screenshot 2025-01-17 at 9 14 44 AM" src="https://github.com/user-attachments/assets/2895bcb8-6939-460f-8b01-5039240e74ff" />
 
-### Task Details Sidebar
-<img width="1511" alt="Screenshot 2025-01-16 at 5 44 20 PM" src="https://github.com/user-attachments/assets/d54382b5-1221-4f2e-94bb-5caf389182f4" />
+<img width="534" alt="Screenshot 2025-01-17 at 9 14 25 AM" src="https://github.com/user-attachments/assets/611a4d8c-6230-40d3-a965-d566b692120b" />
+
 
 
 *Replace `path-to-screenshotX.png` with the actual paths to your screenshots.*
